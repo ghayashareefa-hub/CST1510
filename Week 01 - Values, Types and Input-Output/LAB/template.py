@@ -21,9 +21,9 @@ Delete these instructions as you replace them with your code.
 #
 #    Remember: input() always gives back text.
 
-Source_ip = input("Enter Source IP")     # : replace with an input() call
-first = 0.0     # : replace with an input() call, converted
-second = 0.0    # : replace with an input() call, converted
+dataset_name = input("dataset name :")
+rows_loaded = float(input("rows loaded :"))
+rows_expected = float(input("rows expected :"))  
 
 
 # ================================================================== PROCESS
@@ -34,8 +34,8 @@ second = 0.0    # : replace with an input() call, converted
 #
 #    Do not type the answers. Calculate them.
 
-difference = 0.0   # 
-percent = 0.0      # 
+difference = rows_expected - rows_loaded   # 
+percent = (difference - rows_expected)*100   # 
 
 
 # =================================================================== OUTPUT
@@ -50,11 +50,12 @@ percent = 0.0      #
 
 print()
 print("=" * 34)
-print(f"  RECORD CHECK  -  {label}")
+print(f"  RECORD CHECK  -  {dataset_name}")
 print("=" * 34)
-
-# : your report lines go here
-
+print("dataset : ", dataset_name)
+print("rows loaded : ", rows_loaded)
+print("rows expected :",rows_expected )
+print("diffrence %:", percent)
 print("=" * 34)
 
 
